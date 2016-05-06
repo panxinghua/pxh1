@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- common color   -->
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#2a2335</color>
+    <color name="colorAccent">#ff6334</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+
+    <!-- backgroud color   -->
+    <color name="colorBackground">#eeeeee</color>
+    <color name="color_section_backgroud">#eeeeee</color>
+    <color name="color_tabbar">#ffffff</color>
+    <color name="color_list_primary_normal">#ffffff</color>
+    <color name="color_list_primary_press">#f2f2f2</color>
+
+    <!-- line color   -->
+    <color name="color_Stroke">#dbdbdb</color>
+    <color name="color_segmentline">#e8e8e8</color>
+
+    <!-- text color   -->
+    <color name="color_text_black">#000000</color>
+    <color name="color_text_grey">#888888</color>
+    <color name="color_text_white">#FFFFFF</color>
+    <color name="color_input_placehodder">#a0a0a0</color>
+
+</resources>

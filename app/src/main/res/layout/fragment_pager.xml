@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE LinearLayout [
+    <!ELEMENT LinearLayout (RelativeLayout|TextView|android.support.v4.view.ViewPager)*>
+    <!ATTLIST LinearLayout
+        android:layout_height CDATA #REQUIRED
+        android:layout_width CDATA #REQUIRED
+        android:orientation CDATA #IMPLIED
+        xmlns:android CDATA #IMPLIED>
+    <!ELEMENT RelativeLayout (LinearLayout|ImageView|Button)*>
+    <!ATTLIST RelativeLayout
+        android:background CDATA #REQUIRED
+        android:layout_height CDATA #REQUIRED
+        android:layout_width CDATA #REQUIRED>
+    <!ELEMENT TextView (#PCDATA)>
+    <!ATTLIST TextView
+        android:gravity CDATA #REQUIRED
+        android:id CDATA #REQUIRED
+        android:layout_gravity CDATA #REQUIRED
+        android:layout_height CDATA #REQUIRED
+        android:layout_width CDATA #REQUIRED
+        android:padding CDATA #REQUIRED
+        android:text CDATA #REQUIRED
+        android:textColor CDATA #REQUIRED
+        android:textSize CDATA #REQUIRED>
+    <!ELEMENT ImageView (#PCDATA)>
+    <!ATTLIST ImageView
+        android:adjustViewBounds CDATA #IMPLIED
+        android:background CDATA #IMPLIED
+        android:fillAfter CDATA #IMPLIED
+        android:id CDATA #REQUIRED
+        android:layout_alignParentBottom CDATA #IMPLIED
+        android:layout_alignParentLeft CDATA #IMPLIED
+        android:layout_alignParentRight CDATA #IMPLIED
+        android:layout_alignParentTop CDATA #IMPLIED
+        android:layout_alignRight CDATA #IMPLIED
+        android:layout_centerVertical CDATA #IMPLIED
+        android:layout_height CDATA #REQUIRED
+        android:layout_marginLeft CDATA #IMPLIED
+        android:layout_marginRight CDATA #IMPLIED
+        android:layout_toLeftOf CDATA #IMPLIED
+        android:layout_toRightOf CDATA #IMPLIED
+        android:layout_width CDATA #REQUIRED
+        android:scaleType CDATA #IMPLIED
+        android:src CDATA #IMPLIED
+        android:visibility CDATA #IMPLIED>
+    <!ELEMENT android.support.v4.view.ViewPager (#PCDATA)>
+    <!ATTLIST android.support.v4.view.ViewPager
+        xmlns:android CDATA #REQUIRED
+        android:id CDATA #REQUIRED
+        android:layout_width CDATA #REQUIRED
+        android:layout_height CDATA #REQUIRED
+        android:layout_weight CDATA #REQUIRED
+        android:background CDATA #REQUIRED>
+    <!ELEMENT Button (#PCDATA)>
+    <!ATTLIST Button
+        android:id CDATA #REQUIRED
+        android:layout_width CDATA #REQUIRED
+        android:layout_height CDATA #REQUIRED
+        android:layout_centerVertical CDATA #REQUIRED
+        android:layout_alignParentRight CDATA #REQUIRED
+        android:layout_gravity CDATA #REQUIRED
+        android:background CDATA #REQUIRED>
+    ]>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+
+
+         <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/nav_bar_height"
+             android:background="@drawable/navbar_bg">
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+            
+            <TextView
+                android:id="@+id/dialing"
+                android:layout_width="wrap_content"
+                android:padding="12dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="拨号"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_l" />
+            
+            <TextView
+                android:id="@+id/linkman"
+                android:layout_width="wrap_content"
+                android:padding="12dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="联系人"
+                android:textColor="@color/color_text_white"
+                android:textSize="@dimen/textsize_l" />
+          
+        </LinearLayout>
+
+             <ImageView
+                 android:id="@+id/tab_bar"
+                 android:layout_width="60dp"
+
+                 android:layout_alignRight="@+id/dialing"
+                 android:fillAfter="true"
+                 android:layout_height="5dp"
+                 android:background="@color/colorAccent"
+                 android:layout_alignParentBottom="true"
+                 />
+
+        <ImageView
+            android:id="@+id/btn_bin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/btn_bin_nor"
+            android:visibility="visible"
+            />
+		
+         <ImageView
+            android:id="@+id/btn_addcontact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/btn_addcontact_nor"
+            android:visibility="gone"
+             />
+
+        </RelativeLayout>
+
+
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorBackground" >
+    </android.support.v4.view.ViewPager>
+
+   
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@drawable/toolbar_bg" >
+
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="@dimen/btn_roundblack_r"
+            android:layout_height="@dimen/btn_roundblack_r"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/btn_set_nor" />
+
+         <ImageView
+             android:id="@+id/voicecall"
+             android:layout_width="@dimen/tool_bar_height"
+             android:layout_height="@dimen/tool_bar_height"
+             android:layout_alignParentBottom="true"
+             android:layout_marginRight="16dp"
+             android:layout_toLeftOf="@+id/dialer"
+             android:src="@drawable/btn_voicecall_nor" />
+
+         <ImageView
+             android:id="@+id/videocall"
+             android:layout_width="@dimen/tool_bar_height"
+             android:layout_height="@dimen/tool_bar_height"
+             android:layout_alignParentBottom="true"
+             android:layout_marginLeft="32dp"
+             android:layout_toRightOf="@+id/setting"
+             android:src="@drawable/btn_videocall_nor" />
+
+           <Button
+               android:id="@+id/dialer"
+               android:layout_width="@dimen/btn_roundblack_r"
+               android:layout_height="@dimen/btn_roundblack_r"
+               android:layout_centerVertical="true"
+               android:layout_alignParentRight="true"
+               android:layout_gravity="center"
+               android:background="@drawable/btn_keyboard_fold" />
+
+    </RelativeLayout>
+ 
+</LinearLayout>

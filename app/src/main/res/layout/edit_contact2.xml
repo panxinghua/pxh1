@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_contact"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_bar_height"
+        android:background="@drawable/navbar_bg"
+        >
+        
+        
+        <ImageView
+            android:id="@+id/back"
+
+            android:layout_width="@dimen/nav_bar_height"
+            android:layout_height="@dimen/nav_bar_height"
+            android:layout_gravity="start|center_vertical"
+            android:src="@drawable/btn_back_nor" />
+
+        <TextView
+            android:id="@+id/title"
+            android:scaleType="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="end|center_vertical"
+            android:text="编辑联系人"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textsize_l" />
+
+        <ImageView
+            android:id="@+id/save"
+            android:layout_width="@dimen/nav_bar_height"
+            android:layout_height="@dimen/nav_bar_height"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end|center_vertical"
+            android:src="@drawable/btn_ok_nor" />
+
+    </RelativeLayout>
+
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:paddingTop="@dimen/nav_bar_height"
+	    android:paddingBottom="@dimen/section_gap"
+	    >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_oneavat_height"
+            android:background="@color/colorBackground"
+            >
+            
+            <TextView 
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="头像"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textsize_m"
+                android:textColor="@color/color_text_grey"
+                />
+            
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:src="@drawable/icon_male40"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_green_nor"
+        />
+        	
+        <ImageView 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/section_gap"
+            android:background="@color/colorBackground"
+            />
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_oneitem_height"
+            android:background="@color/color_text_white"
+            >
+            
+            <TextView 
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="姓名"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textsize_m"
+                android:textColor="@color/color_text_white"
+                />
+            
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="200dip"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_m"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/color_text_white"
+                android:gravity="bottom|right"
+                />
+            
+            
+        </RelativeLayout>
+        
+         <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_oneitem_height"
+            android:background="@color/colorBackground"
+            >
+            
+            <TextView 
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="公司"
+                android:layout_alignParentLeft="true"
+                android:phoneNumber="true"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textsize_m"
+                android:textColor="@color/color_text_white"
+                />
+            
+            <EditText
+                android:id="@+id/edit_company"
+                android:layout_width="200dip"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_m"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/colorBackground"
+                android:gravity="bottom|right"
+                />
+        </RelativeLayout>
+        
+          <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_oneitem_height"
+            android:background="@color/color_text_white"
+            >
+            
+            <TextView 
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="部门"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textsize_m"
+                android:textColor="@color/color_text_white"
+                />
+            
+            <EditText
+                android:id="@+id/edit_department"
+                android:layout_width="200dip"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_m"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/colorBackground"
+                android:gravity="bottom|right"
+                />
+        </RelativeLayout>
+        
+         <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_oneitem_height"
+            android:background="@color/color_text_white"
+            >
+            
+            <TextView 
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="职位"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textsize_m"
+                android:textColor="@color/color_text_white"
+                />
+            
+            <EditText
+                android:id="@+id/edit_title"
+                android:layout_width="200dip"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textColorLink="#000000"
+                android:textColor="@color/colorWhite"
+                android:backgroundTint="@color/colorBackground"
+                android:textSize="@dimen/textsize_m"
+                android:layout_centerInParent="true"
+                android:gravity="bottom|right"
+
+                />
+        </RelativeLayout>
+        
+        <ImageView 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/section_gap"
+           android:background="@color/colorBackground"
+            />
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_oneitem_height"
+            android:background="@color/color_text_white"
+            >
+            
+            <TextView 
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="手机"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textsize_m"
+                android:textColor="@color/color_text_white"
+                />
+            
+            <EditText
+                android:id="@+id/edit_phoneNumber"
+                android:layout_width="200dip"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textColorLink="#000000"
+                android:textColor="@color/colorWhite"
+                android:backgroundTint="@color/colorBackground"
+                android:textSize="@dimen/textsize_m"
+                android:layout_centerInParent="true"
+                android:gravity="bottom|right"
+                />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_oneitem_height"
+            android:background="@color/color_text_white"
+            >
+            
+            <TextView 
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="办公电话"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textsize_m"
+                android:textColor="@color/color_text_white"
+                />
+            
+            <EditText
+                android:id="@+id/edit_officeNumber"
+                android:layout_width="200dip"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textColorLink="#000000"
+                android:textColor="@color/colorWhite"
+                android:backgroundTint="@color/colorBackground"
+                android:textSize="@dimen/textsize_m"
+                android:layout_centerInParent="true"
+                 android:gravity="bottom|right"
+                />
+        </RelativeLayout>
+    	<RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_oneitem_height"
+            android:background="@color/color_text_white"
+            >
+            
+            <TextView 
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="分组"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textsize_m"
+                android:textColor="@color/color_text_white"
+                />
+            
+            <EditText
+                android:id="@+id/edit_group"
+                android:layout_width="200dip"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textColorLink="#000000"
+                android:textColor="@color/colorWhite"
+                android:backgroundTint="@color/colorBackground"
+                android:textSize="@dimen/textsize_m"
+                android:layout_centerInParent="true"
+                android:gravity="bottom|right"
+                />
+        </RelativeLayout>
+        
+		<RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_oneitem_height"
+            android:background="@color/color_text_white"
+            >
+            
+            <TextView 
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="邮箱"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textsize_m"
+                android:textColor="@color/color_text_white"
+                />
+            
+            <EditText
+                android:id="@+id/edit_email"
+                android:layout_width="200dip"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textColorLink="#000000"
+                android:textColor="@color/colorWhite"
+                android:backgroundTint="@color/colorBackground"
+                android:textSize="@dimen/textsize_m"
+                android:layout_centerInParent="true"
+                android:gravity="bottom|right"
+                />
+        </RelativeLayout>
+        
+		
+    </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
